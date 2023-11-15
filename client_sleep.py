@@ -51,6 +51,7 @@ class StateMachine:
         try:
             for file_path in files:
                 self.send_file(file_path)
+                time.sleep(5)
             self.message = "All files sent."
             return "EXIT"
         except KeyboardInterrupt:
